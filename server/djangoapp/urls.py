@@ -9,15 +9,28 @@ urlpatterns = [
     # view refers to the view function
     # name the URL
 
+    # path for static view
+    path(route='static', view=views.index_static, name='index_static'),
+
     # path for about view
+        #week 1 T4
+    path(route='about', view=views.about, name='about'),
 
     # path for contact us view
+        #week 1 T4
+    path(route='contact', view=views.contact, name='contact'),
 
     # path for registration
+        #week 2 t7
+    path('registration/', view=views.registration_request, name='registration'),
 
     # path for login
+        #week 2 t 5
+    path(route='login/', view=views.login_request, name='login'),
 
     # path for logout
+        #week 2 t 5
+    path(route='logout/', view=views.logout_request, name='logout'),
 
     path(route='', view=views.get_dealerships, name='index'),
 
